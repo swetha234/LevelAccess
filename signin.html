@@ -18,6 +18,17 @@
         margin-top: 34px;
       }
     </style>
+
+    <!-- Back button issue in the browser after loggin out -->
+    <script type="text/javascript">
+      function preventBack() {
+        window.history.forward();
+      }
+      setTimeout('preventBack()', 0);
+      window.onunload = function() {
+        null;
+      };
+    </script>
     <h1>Welcome you have logged in...!!!!</h1>
 
     <button><a href="index.html">Logout</a></button>
